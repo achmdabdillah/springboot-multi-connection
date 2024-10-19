@@ -1,0 +1,34 @@
+server:
+  port: 8080
+  error:
+    include-message: always
+  servlet:
+    session:
+      timeout: 600000
+spring:
+  application:
+    name: tracking-order-livin
+  datasource:
+    postgres:
+      url: jdbc:postgresql://localhost:5432/test_postgres
+      username: postgres
+      password: postgres
+    oracle:
+      url: jdbc:oracle:thin:@localhost:1521:testoracle
+      username: ABDIL
+      password: oracle
+      driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    show-sql: false
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: false
+        # dialect: org.hibernate.dialect.PostgreSQL81Dialect
+    open-in-view: false
+  jackson:
+    property_naming_strategy: SNAKE_CASE
+    serialization:
+      fail_on_empty_beans: false
