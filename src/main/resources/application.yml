@@ -18,6 +18,8 @@ spring:
       username: ABDIL
       password: oracle
       driver-class-name: oracle.jdbc.OracleDriver
+    mongo:
+      url: mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.2
   jpa:
     show-sql: false
     generate-ddl: true
